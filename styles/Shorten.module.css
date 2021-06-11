@@ -1,0 +1,41 @@
+.shortenALink {
+  display: flex;
+  margin: 2rem 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 160px;
+  width: 90%;
+  border-radius: 15px;
+  background-image: url("../resources/images/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: -10%;
+  background-color: var(--darkViolet);
+}
+
+.shortenALink input,
+.shortenALink button {
+  width: 90%;
+  height: 30%;
+  border: 0;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.shortenALink input {
+  padding: 1rem;
+  outline: 0;
+}
+
+.shortenALink button {
+  background-color: var(--cyan);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.shortenALink input::placeholder {
+  color: var(--grayishViolet);
+}

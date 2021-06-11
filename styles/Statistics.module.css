@@ -1,0 +1,11 @@
+.advancedStatistics {
+  width: 100%;
+  align-self: center;
+  background-color: var(--smoke);
+  text-align: center;
+}
+
+.advancedStatistics h2,
+.advancedStatistics p {
+  padding: 0 1rem;
+}
