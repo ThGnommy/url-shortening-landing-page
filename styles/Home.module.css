@@ -8,23 +8,6 @@
   transform: translateX(3%);
 }
 
-.callToAction {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2rem 0;
-}
-
-.primaryButton {
-  background-color: var(--cyan);
-  color: #ffffff;
-  border: 0;
-  padding: 1rem 2.5rem;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: 1.3rem;
-}
-
 .shortenALinkSection {
   display: flex;
   justify-content: center;

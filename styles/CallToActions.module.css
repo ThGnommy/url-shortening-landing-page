@@ -1,0 +1,40 @@
+.callToAction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.callToAction p {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.callToAction h1 {
+  padding: 0 1rem;
+}
+
+.callToActionButton {
+  background-color: var(--cyan);
+  color: #ffffff;
+  border: 0;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.lastCallToAction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-image: url("../resources/images/bg-boost-mobile.svg");
+  background-color: var(--darkViolet);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.lastCallToAction h2 {
+  color: #ffffff;
+}

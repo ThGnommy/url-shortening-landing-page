@@ -3,7 +3,7 @@ import styles from "../styles/Shorten.module.css";
 const ShortenALink = () => {
   return (
     <div className={styles.shortenALink}>
-      <input type="text" placeholder="Shorten a link here..." value="" />
+      <input type="text" placeholder="Shorten a link here..." />
       <button>Shorten it!</button>
     </div>
   );

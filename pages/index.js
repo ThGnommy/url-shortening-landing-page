@@ -7,6 +7,9 @@ import CallToAction from "../components/CallToAction";
 import { useState } from "react";
 import ShortenALink from "../components/ShortenALink";
 import AdvancedStatistics from "../components/AdvancedStatistics";
+import Cards from "../components/Cards";
+import LastCallToAction from "../components/LastCallToAction";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const [mobileNav, setMobileNav] = useState(false);
@@ -37,6 +40,9 @@ export default function Home() {
           <ShortenALink />
         </section>
         <AdvancedStatistics />
+        <Cards />
+        <LastCallToAction />
+        <Footer />
       </main>
     </div>
   );

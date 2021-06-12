@@ -2,7 +2,6 @@ import styles from "../styles/Header.module.css";
 import Image from "next/image";
 import logo from "../resources/images/logo.svg";
 import MobileNav from "./MobileNav";
-import { useEffect } from "react";
 
 const Header = ({ nav = false, switchNav }) => {
   return (

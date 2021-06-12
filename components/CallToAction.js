@@ -1,4 +1,4 @@
-import styles from "../styles/Home.module.css";
+import styles from "../styles/CallToActions.module.css";
 
 const CallToAction = () => {
   return (
@@ -8,7 +8,7 @@ const CallToAction = () => {
         Build your brand’s recognition and get detailed insights on how your
         links are performing.
       </p>
-      <button className={styles.primaryButton}>Get Started</button>
+      <button className={styles.callToActionButton}>Get Started</button>
     </div>
   );
 };

@@ -1,0 +1,42 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--smoke);
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 85%;
+  height: 300px;
+  margin: 3rem 0;
+  border-radius: 5px;
+}
+
+.card:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  width: 10px;
+  height: 100px;
+  background-color: var(--cyan);
+}
+
+.card section {
+  position: absolute;
+  top: -40px !important;
+  padding: 1rem !important;
+  background-color: var(--darkViolet);
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+}
+
+.card p {
+  padding: 0 1rem;
+}
