@@ -23,6 +23,10 @@
   font-size: 1.3rem;
 }
 
+.callToActionButton:active {
+  background-color: var(--cyanActive);
+}
+
 .lastCallToAction {
   display: flex;
   flex-direction: column;
@@ -37,4 +41,14 @@
 
 .lastCallToAction h2 {
   color: #ffffff;
+}
+
+@media screen and (min-width: 1440px) {
+  .lastCallToAction {
+    background-image: url("../resources/images/bg-boost-desktop.svg");
+  }
+  .lastCallToAction h2 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
 }

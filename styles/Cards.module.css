@@ -40,3 +40,69 @@
 .card p {
   padding: 0 1rem;
 }
+
+@media screen and (min-width: 1440px) {
+  .cardContainer {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card {
+    width: 25%;
+    margin: 10rem 3rem;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .card:nth-child(1) {
+    transform: translateY(-20%);
+  }
+
+  .card:nth-child(3) {
+    transform: translateY(20%);
+  }
+
+  .card h2,
+  .card p {
+    margin: 0.5rem 2rem;
+  }
+
+  .card h2 {
+    padding-top: 2rem;
+  }
+
+  .card p {
+    padding: 0;
+  }
+
+  .card:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    top: 200px;
+    right: -130px;
+    width: 130px;
+    height: 10px;
+    background-color: var(--cyan);
+  }
+
+  .card:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    top: 150px;
+    right: -130px;
+    width: 130px;
+    height: 10px;
+    background-color: var(--cyan);
+  }
+
+  .card section {
+    position: absolute;
+    top: -40px !important;
+    left: 40px;
+    padding: 1rem !important;
+    background-color: var(--darkViolet);
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+  }
+}
