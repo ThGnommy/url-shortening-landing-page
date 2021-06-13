@@ -76,3 +76,29 @@
   width: 80%;
   opacity: 0.2;
 }
+
+.desktopNav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.desktopNav ul li {
+  padding: 0 2rem;
+  color: var(--grayishViolet);
+}
+
+.desktopNav ul li:active {
+  color: var(--darkViolet);
+}
+
+.desktopNav ul:nth-child(1) {
+  flex-grow: 2;
+}
+
+@media screen and (min-width: 1300px) {
+  .desktopNav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+}

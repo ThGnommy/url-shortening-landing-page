@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 160px;
+  height: 180px;
   width: 90%;
   border-radius: 15px;
   background-image: url("../resources/images/bg-shorten-mobile.svg");
@@ -18,7 +18,7 @@
 .shortenALink input,
 .shortenALink button {
   width: 90%;
-  height: 30%;
+  height: 50px;
   border: 0;
   border-radius: 10px;
   font-size: 1rem;
@@ -51,6 +51,16 @@
 }
 
 .focusText {
+  display: none;
+  width: 90%;
+  font-size: 0.8rem;
+  margin: 0;
+  text-align: left;
+  color: var(--red);
+}
+
+.shortenALink input:focus + .focusText {
+  display: flex;
 }
 
 @media screen and (min-width: 1300px) {
@@ -58,6 +68,7 @@
     flex-direction: row;
     width: 80%;
     background-image: url("../resources/images/bg-shorten-desktop.svg");
+    background-size: cover;
   }
 
   .shortenALink input {
@@ -72,5 +83,16 @@
     width: 20%;
     height: 35%;
     font-size: 1.3rem;
+  }
+
+  .focusText {
+    display: none;
+    position: absolute;
+    bottom: 15%;
+    left: 2rem;
+    font-size: 0.8rem;
+    margin: 0;
+    text-align: left;
+    color: var(--red);
   }
 }

@@ -45,11 +45,11 @@
   .cardContainer {
     flex-direction: row;
     justify-content: center;
+    align-content: center;
   }
 
   .card {
-    width: 25%;
-    margin: 10rem 3rem;
+    margin: 8rem 2rem;
     text-align: left;
     align-items: flex-start;
   }
@@ -104,5 +104,38 @@
     border-radius: 50%;
     height: 80px;
     width: 80px;
+  }
+
+  .card section img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .card section {
+    position: absolute;
+    top: -40px !important;
+    padding: 2rem !important;
+    background-color: var(--darkViolet);
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+  }
+
+  .card section img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+
+  .card p {
+    font-size: 0.9rem;
   }
 }

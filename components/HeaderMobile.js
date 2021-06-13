@@ -3,7 +3,7 @@ import Image from "next/image";
 import logo from "../resources/images/logo.svg";
 import MobileNav from "./MobileNav";
 
-const Header = ({ nav = false, switchNav }) => {
+const HeaderMobile = ({ nav = false, switchNav }) => {
   return (
     <div className={styles.header}>
       <Image width="150px" height="40px" src={logo} alt="logo" />
@@ -20,4 +20,4 @@ const Header = ({ nav = false, switchNav }) => {
   );
 };
 
-export default Header;
+export default HeaderMobile;

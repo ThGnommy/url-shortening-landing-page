@@ -1,18 +1,24 @@
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import Header from "../components/Header";
+import HeaderMobile from "../components/HeaderMobile";
 import styles from "../styles/Home.module.css";
 import illustrationWorking from "../resources/images/illustration-working.svg";
 import CallToAction from "../components/CallToAction";
-import { useState } from "react";
 import ShortenALink from "../components/ShortenALink";
 import AdvancedStatistics from "../components/AdvancedStatistics";
 import Cards from "../components/Cards";
 import LastCallToAction from "../components/LastCallToAction";
 import Footer from "../components/Footer";
+import HeaderDesktop from "../components/HeaderDesktop";
 
 export default function Home() {
   const [mobileNav, setMobileNav] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    setIsDesktop(window.matchMedia("(min-width: 1300px)").matches);
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -23,10 +29,14 @@ export default function Home() {
       </Head>
 
       <main className={styles.pageContainer}>
-        <Header
-          switchNav={() => setMobileNav((prev) => !prev)}
-          nav={mobileNav}
-        />
+        {isDesktop ? (
+          <HeaderDesktop />
+        ) : (
+          <HeaderMobile
+            switchNav={() => setMobileNav((prev) => !prev)}
+            nav={mobileNav}
+          />
+        )}
         <div className={styles.workerImage}>
           <Image
             layout="fixed"

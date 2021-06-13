@@ -1,6 +1,5 @@
 import styles from "../styles/Header.module.css";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
 
 const MobileNav = () => {
   return (
