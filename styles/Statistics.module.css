@@ -9,3 +9,9 @@
 .advancedStatistics p {
   padding: 0 1.5rem;
 }
+
+@media screen and (min-width: 1300px) {
+  .advancedStatistics h2 {
+    font-size: 2rem;
+  }
+}

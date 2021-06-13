@@ -7,7 +7,10 @@ const Header = ({ nav = false, switchNav }) => {
   return (
     <div className={styles.header}>
       <Image width="150px" height="40px" src={logo} alt="logo" />
-      <div onClick={switchNav} className={styles.mobile__nav_icon}>
+      <div
+        onClick={switchNav}
+        className={nav ? styles.mobile__nav_icon_open : styles.mobile__nav_icon}
+      >
         <div className={styles.line}></div>
         <div className={styles.line}></div>
         <div className={styles.line}></div>
