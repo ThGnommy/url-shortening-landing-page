@@ -83,6 +83,7 @@
 }
 
 .desktopNav ul li {
+  font-weight: 700;
   padding: 0 2rem;
   color: var(--grayishViolet);
 }
@@ -93,6 +94,17 @@
 
 .desktopNav ul:nth-child(1) {
   flex-grow: 2;
+}
+
+.desktopNav ul:nth-child(2) li:last-of-type a {
+  color: #ffffff;
+  background-color: var(--cyan);
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+}
+
+.desktopNav ul:nth-child(2) li:last-of-type a:active {
+  background-color: var(--cyanActive);
 }
 
 @media screen and (min-width: 1300px) {

@@ -19,7 +19,7 @@ const MobileNav = () => {
           <Link href="#">Login</Link>
         </li>
         <li>
-          <Link href="#">Signup</Link>
+          <Link href="#">Sign Up</Link>
         </li>
       </ul>
     </nav>

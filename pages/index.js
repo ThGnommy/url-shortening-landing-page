@@ -11,6 +11,7 @@ import Cards from "../components/Cards";
 import LastCallToAction from "../components/LastCallToAction";
 import Footer from "../components/Footer";
 import HeaderDesktop from "../components/HeaderDesktop";
+import ShortenLinks from "../components/ShortenLinks";
 
 export default function Home() {
   const [mobileNav, setMobileNav] = useState(false);
@@ -48,6 +49,7 @@ export default function Home() {
         <CallToAction />
         <section className={styles.shortenALinkSection}>
           <ShortenALink />
+          <ShortenLinks />
         </section>
         <AdvancedStatistics />
         <Cards />
