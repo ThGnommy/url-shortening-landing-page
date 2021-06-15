@@ -1,22 +1,20 @@
 .shortenedLink {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 90%;
   background-color: #ffffff;
   border-radius: 15px;
-}
-
-.shortenedLink div {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
+  margin: 0.5rem 0;
 }
 
 .shortenedLink p {
   padding: 1rem 0;
-  word-break: break-all;
   margin: 0;
-  align-self: flex-start;
+  word-break: break-all;
+  width: 90%;
+  text-align: left;
 }
 
 .shortenedLink p:nth-of-type(1) {
@@ -28,6 +26,7 @@
 }
 
 .shortenedLink hr {
+  width: 100%;
   margin: 0;
   height: 2px;
   border-width: 0;
@@ -37,7 +36,7 @@
 
 .shortenedLink button {
   background-color: var(--cyan);
-  width: 100%;
+  width: 90%;
   padding: 0.5rem;
   font-size: 1rem;
   font-weight: 700;
@@ -46,4 +45,26 @@
   margin-bottom: 1rem;
   border: 0;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1300px) {
+  .shortenedLink {
+    flex-direction: row;
+    width: 80%;
+    padding: 0 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .shortenedLink button {
+    width: 20%;
+    margin: 0 0 0 1rem;
+  }
+  .shortenedLink hr {
+    display: none;
+  }
+
+  .shortenedLink p:last-of-type {
+    text-align: right;
+  }
 }

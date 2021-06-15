@@ -49,6 +49,10 @@ export default function Home() {
         <CallToAction />
         <section className={styles.shortenALinkSection}>
           <ShortenALink />
+        </section>
+        <section className={styles.shortenALinkSection2}>
+          <ShortenLinks />
+          <ShortenLinks />
           <ShortenLinks />
         </section>
         <AdvancedStatistics />
