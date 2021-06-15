@@ -16,6 +16,12 @@ import ShortenLinks from "../components/ShortenLinks";
 export default function Home() {
   const [mobileNav, setMobileNav] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const [links, setLinks] = useState([
+    {
+      original: "www.example.com",
+      shorten: "www.bit.skjdf2",
+    },
+  ]);
 
   useEffect(() => {
     setIsDesktop(window.matchMedia("(min-width: 1300px)").matches);
@@ -51,9 +57,16 @@ export default function Home() {
           <ShortenALink />
         </section>
         <section className={styles.shortenALinkSection2}>
-          <ShortenLinks />
-          <ShortenLinks />
-          <ShortenLinks />
+          {links.length > 0
+            ? links.map((link) => (
+                <>
+                  <ShortenLinks
+                    original={link.original}
+                    shortened={link.shorten}
+                  />
+                </>
+              ))
+            : null}
         </section>
         <AdvancedStatistics />
         <Cards />

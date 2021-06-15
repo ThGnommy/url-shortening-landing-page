@@ -1,12 +1,12 @@
 import styles from "../styles/ShortenLinks.module.css";
 
-const ShortenLinks = () => {
+const ShortenLinks = ({ original, shortened }) => {
   return (
     <div className={styles.shortenedLink}>
-        <p>https://www.example.com</p>
-        <hr />
-        <p>https://rel.ink/kj39sw</p>
-        <button>Copy</button>
+      <p>{original}</p>
+      <hr />
+      <p>{shortened}</p>
+      <button>Copy</button>
     </div>
   );
 };
