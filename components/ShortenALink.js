@@ -1,11 +1,16 @@
 import styles from "../styles/Shorten.module.css";
 
-const ShortenALink = () => {
+const ShortenALink = ({ onClick, valueRef, onChange }) => {
   return (
     <div className={styles.shortenALink}>
-      <input type="text" placeholder="Shorten a link here..." />
+      <input
+        ref={valueRef}
+        onChange={onChange}
+        type="text"
+        placeholder="Shorten a link here..."
+      />
       <p className={styles.focusText}>Please add a link</p>
-      <button>Shorten it!</button>
+      <button onClick={onClick}>Shorten it!</button>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import HeaderMobile from "../components/HeaderMobile";
@@ -12,19 +12,39 @@ import LastCallToAction from "../components/LastCallToAction";
 import Footer from "../components/Footer";
 import HeaderDesktop from "../components/HeaderDesktop";
 import ShortenLinks from "../components/ShortenLinks";
+import axios from "axios";
 
 export default function Home() {
   const [mobileNav, setMobileNav] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
-  const [links, setLinks] = useState([
-    {
-      original: "www.example.com",
-      shorten: "www.bit.skjdf2",
-    },
-  ]);
+  const [query, setQuery] = useState("");
+  const [links, setLinks] = useState([]);
+
+  const inputRef = useRef();
+
+  const getShortenedLink = async () => {
+    inputRef.current.value = "";
+
+    const headers = {
+      Authorization: `Bearer ${process.env.NEXT_PUBLIC_BITLY_ACCESS_TOKEN}`,
+      "Content-Type": "application/json",
+    };
+
+    const response = await axios.post(
+      "https://api-ssl.bitly.com/v4/bitlinks",
+      {
+        long_url: query,
+      },
+      {
+        headers: headers,
+      }
+    );
+
+    setLinks((prev) => [...prev, response.data]);
+  };
 
   useEffect(() => {
-    setIsDesktop(window.matchMedia("(min-width: 1300px)").matches);
+    setIsDesktop(window.matchMedia("(min-width: 1224px)").matches);
   }, []);
 
   return (
@@ -54,17 +74,20 @@ export default function Home() {
         </div>
         <CallToAction />
         <section className={styles.shortenALinkSection}>
-          <ShortenALink />
+          <ShortenALink
+            valueRef={inputRef}
+            onChange={() => setQuery(inputRef.current.value)}
+            onClick={getShortenedLink}
+          />
         </section>
         <section className={styles.shortenALinkSection2}>
           {links.length > 0
             ? links.map((link) => (
-                <>
-                  <ShortenLinks
-                    original={link.original}
-                    shortened={link.shorten}
-                  />
-                </>
+                <ShortenLinks
+                  original={link.long_url}
+                  shortened={link.link}
+                  key={link.id}
+                />
               ))
             : null}
         </section>
