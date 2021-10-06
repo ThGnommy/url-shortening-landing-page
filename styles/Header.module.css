@@ -77,6 +77,10 @@
   opacity: 0.2;
 }
 
+.desktopNav ul:nth-child(2) li:nth-child(2) a:hover {
+  background-color: var(--cyanActive);
+}
+
 .desktopNav ul {
   display: flex;
   flex-direction: row;

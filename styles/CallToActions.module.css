@@ -21,9 +21,10 @@
   border-radius: 50px;
   font-weight: 700;
   font-size: 1.3rem;
+  cursor: pointer;
 }
 
-.callToActionButton:active {
+.callToActionButton:hover {
   background-color: var(--cyanActive);
 }
 

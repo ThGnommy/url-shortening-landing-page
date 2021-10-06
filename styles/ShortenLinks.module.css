@@ -47,6 +47,10 @@
   cursor: pointer;
 }
 
+.shortenedLink button:hover {
+  background-color: var(--cyanActive);
+}
+
 .copied {
   background-color: var(--darkViolet) !important;
   width: 90%;

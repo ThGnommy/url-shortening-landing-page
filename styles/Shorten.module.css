@@ -38,6 +38,10 @@
   cursor: pointer;
 }
 
+.shortenALink button:hover { 
+  background-color: var(--cyanActive);
+}
+
 .shortenALink input::placeholder {
   color: var(--grayishViolet);
 }
